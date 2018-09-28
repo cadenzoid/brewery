@@ -3,3 +3,35 @@ body {
   padding: 0;
   font-family: sans-serif;
   display: grid; }
+
+body {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 1fr); }
+
+.list {
+  background: rgba(255, 0, 255, 0.2);
+  min-height: 100vh; }
+
+.root {
+	position: relative;
+}
+
+.card-results {
+  background: rgba(255, 255, 0, 0.2);
+  min-height: 100vh; }
+
+ .card-results ul {
+ 	display: flex;
+ 	flex-direction: row;
+ 	flex-wrap: wrap;
+ }
+
+ .card-results ul li {
+ 	width: 10vw;
+ 	list-style-type: none;
+ 	padding: 1vw;
+ 	border: 1px solid black;
+ 	border-radius: 3px;
+ 	margin: 0.5vw;
+ }

@@ -1,9 +1,7 @@
 import React, { Component }   from 'react';
 import './App.css';
-import Request                from 'superagent';
-import _                      from 'lodash';
 
-class App extends Component {
+class List extends Component {
 
   constructor() {
     super();
@@ -13,6 +11,7 @@ class App extends Component {
 
   componentWillMount() {
       // called the first time the component is loaded right before the component is added to the page
+      this.updateSearch;
   }
 
   componentDidMount() {
@@ -42,8 +41,6 @@ class App extends Component {
 
   render() {
     var cards = _.map(this.state.cards, (card) => {
-
-
       return <li 
         key={card.id} 
         title={card.name} 
@@ -53,8 +50,6 @@ class App extends Component {
         usd={card.usd} 
         color={card.color_identity} 
         type={card.type_line} >
-
-        
         
         
         {card.name}
@@ -75,4 +70,4 @@ class App extends Component {
   
 }
 
-export default App;
+export default App; 
